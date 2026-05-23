@@ -1,0 +1,59 @@
+#
+# OSS Status Tracker — declarative workflow (Microsoft Agent Framework).
+#
+# This workflow is the *agent-native* expression of what the deterministic
+# `refresh-oss-status.ps1` script does today. Both modes target the same
+# `OSS-STATUS.md` file shape (BEGIN/END marker blocks preserve hand-curated
+# content) and either can be wired into the daily GitHub Actions cron.
+#
+# Two agents, sequential:
+#
+#   1. WatcherAgent   Polls GitHub for the user's open PRs, recent merges, and
+#                     stale threads across upstream repos. Emits a structured
+#                     JSON delta. MCP-backed (https://api.githubcopilot.com/mcp/
+#                     or local github-mcp-server in HTTP mode).
+#   2. TrackerAgent   Consumes the delta and rewrites OSS-STATUS.md, preserving
+#                     `<!-- BEGIN: PR_TABLE -->` / `<!-- BEGIN: MERGED_TABLE -->`
+#                     block semantics and the `**Last refreshed:**` line.
+#
+# Register WatcherAgent (Prompt + MCP tool, see ./agents/WatcherAgent.yaml)
+# and TrackerAgent (Prompt + file-write tool, see ./agents/TrackerAgent.yaml)
+# before executing this workflow.
+#
+# Example input:
+# jluocsa
+#
+kind: Workflow
+trigger:
+
+  kind: OnConversationStart
+  id: workflow_oss_status_tracker
+  actions:
+
+    # 1. Capture the GitHub login to track (CLI arg or default).
+    - kind: SetVariable
+      id: set_user
+      variable: Local.User
+      value: =System.LastMessage.Text
+
+    # 2. Watcher polls GitHub and emits a structured PR/merge delta.
+    - kind: InvokeAzureAgent
+      id: poll_github
+      conversationId: =System.ConversationId
+      agent:
+        name: WatcherAgent
+      input:
+        messages: =UserMessage("Produce the daily OSS status delta for GitHub user '" & Local.User & "'. Cover open PRs (with mergeable, checks, review state, age) and merges in the last 30 days. Return strict JSON with `openPrs` and `mergedPrs` arrays.")
+      output:
+        messages: Local.Delta
+
+    # 3. Tracker rewrites OSS-STATUS.md, preserving the hand-curated sections.
+    - kind: InvokeAzureAgent
+      id: rewrite_status
+      conversationId: =System.ConversationId
+      agent:
+        name: TrackerAgent
+      input:
+        messages: =UserMessage("Rewrite OSS-STATUS.md using the following delta. Modify only the two marker-delimited tables and the last-refreshed line as defined in your instructions. Preserve every other line byte-for-byte.\n\nDelta:\n" & MessageText(Local.Delta))
+      output:
+        autoSend: true

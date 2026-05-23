@@ -1,0 +1,53 @@
+name: refresh
+
+on:
+  schedule:
+    # 13:30 UTC daily = 06:30 PT / 09:30 ET. Tweak to taste.
+    - cron: "30 13 * * *"
+  workflow_dispatch:
+    inputs:
+      user:
+        description: "GitHub login to track (overrides OSS_TRACKER_USER)."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      OSS_TRACKER_USER: ${{ github.event.inputs.user || vars.OSS_TRACKER_USER || github.repository_owner }}
+      OSS_TRACKER_IGNORE_REPOS: ${{ vars.OSS_TRACKER_IGNORE_REPOS }}
+      # GH_TOKEN is what `gh` reads. Default GITHUB_TOKEN is fine for public PR
+      # search. If you want richer signals (e.g. private-discussion reads, org
+      # membership), set a repo secret named OSS_TRACKER_PAT and the workflow
+      # will prefer it.
+      GH_TOKEN: ${{ secrets.OSS_TRACKER_PAT || secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify gh + pwsh
+        shell: pwsh
+        run: |
+          gh --version
+          $PSVersionTable.PSVersion | Out-String
+
+      - name: Refresh OSS-STATUS.md
+        shell: pwsh
+        run: ./refresh-oss-status.ps1 -User $env:OSS_TRACKER_USER
+
+      - name: Commit changes (if any)
+        shell: pwsh
+        run: |
+          $changed = git status --porcelain OSS-STATUS.md
+          if ([string]::IsNullOrWhiteSpace($changed)) {
+            Write-Host "No changes to OSS-STATUS.md — nothing to commit."
+            exit 0
+          }
+          git config user.name  "oss-status-tracker[bot]"
+          git config user.email "oss-status-tracker[bot]@users.noreply.github.com"
+          git add OSS-STATUS.md
+          git commit -m "chore: refresh OSS-STATUS.md ($(Get-Date -Format yyyy-MM-dd))"
+          git push

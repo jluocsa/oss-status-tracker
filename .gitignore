@@ -1,0 +1,8 @@
+.vscode/
+*.log
+*.tmp
+*.bak
+
+# Local sandboxes
+.venv/
+__pycache__/

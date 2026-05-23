@@ -1,0 +1,60 @@
+#
+# WatcherAgent — polls GitHub for the user's PR + merge state across upstream
+# repos. Uses the GitHub MCP server as its tool surface so the agent can issue
+# search/PR/discussion lookups via natural reasoning instead of hand-coded
+# GraphQL.
+#
+# To run with the hosted GitHub MCP, point `url` at https://api.githubcopilot.com/mcp/
+# (PAT-authenticated; configure via the runtime's HttpClient handler).
+# To run with a local github-mcp-server in HTTP mode, point `url` at
+# http://localhost:8082/ and start the server with the toolsets you need.
+#
+kind: Prompt
+name: WatcherAgent
+description: >
+  Reports the daily OSS status delta for a given GitHub user: open PRs (with
+  mergeability, check rollup, review decisions, age) and merges in a recent
+  window. Emits strict JSON suitable for downstream rewrites.
+instructions: |
+  You are the daily watcher for an open-source contribution tracker.
+
+  Given a GitHub login, produce a single JSON object with two arrays:
+    {
+      "openPrs":   [ { number, repo, title, url, mergeable, mergeState,
+                       checks: { success, failure, pending }, reviews,
+                       ageDays } ],
+      "mergedPrs": [ { number, repo, title, url, mergedAt } ]
+    }
+
+  Rules:
+    - openPrs:   PRs authored by the user that are still open. Sort youngest
+                 first (newest createdAt → highest priority for follow-ups).
+    - mergedPrs: PRs authored by the user merged in the last 30 days. Sort
+                 mergedAt descending.
+    - Always exclude repos passed in an IgnoreRepos list (default: none).
+    - Be terse. Titles must escape `|` characters so they're table-safe.
+    - If a tool call fails or returns no data, emit empty arrays — never
+      fabricate PR numbers.
+
+  Use the GitHub MCP tools available to you. Prefer `search_pull_requests`
+  with `is:pr author:<user>` and `pull_request_get` for per-PR detail.
+model:
+  id: gpt-4.1-mini
+  options:
+    temperature: 0.1
+    topP: 0.9
+  connection:
+    kind: remote
+    endpoint: https://api.openai.com/v1
+tools:
+  - kind: mcp
+    name: github
+    description: GitHub MCP server (issues, PRs, search, discussions).
+    url: https://api.githubcopilot.com/mcp/
+    approvalMode:
+      kind: never
+    allowedTools:
+      - search_pull_requests
+      - pull_request_get
+      - list_pull_requests
+      - search_issues
