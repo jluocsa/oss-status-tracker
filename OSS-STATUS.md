@@ -4,28 +4,29 @@ Auto-refreshed daily by [refresh-oss-status.ps1](./refresh-oss-status.ps1).
 Hand-curated sections (queue, notes) live outside the marker blocks and are
 preserved across runs.
 
-**Last refreshed:** 2026-07-01 16:01
+**Last refreshed:** 2026-07-02 15:37
 
 ## Open PRs
 
 <!-- BEGIN: PR_TABLE -->
 | # | Repo | Title | Mergeable | MergeState | Checks | Reviews | Age |
 |---|---|---|---|---|---|---|---|
-| [#3070](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3070) | Azure-Samples/azure-search-openai-demo | Group CSV rows into pages to avoid OOM in cloud ingestion | UNKNOWN | UNKNOWN | 1✅ | none | 32d |
-| [#3069](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3069) | Azure-Samples/azure-search-openai-demo | Heal LLM-simplified citations to canonical reference | UNKNOWN | UNKNOWN | 1✅ | none | 32d |
-| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | MERGEABLE | BLOCKED | 1✅ | pamelafox:CHANGES_REQUESTED | 32d |
-| [#2363](https://github.com/microsoft/graphrag/pull/2363) | microsoft/graphrag | fix(config): preserve literal $ in config values | MERGEABLE | BLOCKED | 1❌, 1✅ | none | 39d |
-| [#14031](https://github.com/microsoft/semantic-kernel/pull/14031) | microsoft/semantic-kernel | .Net: Bump Scriban from 7.1.0 to 7.2.0 to address GHSA-24c8-4792-22hx | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED, github-actions:COMMENTED, westey-m:APPROVED | 39d |
-| [#14030](https://github.com/microsoft/semantic-kernel/pull/14030) | microsoft/semantic-kernel | .Net: Fix RedisJsonCollection upsert persisting unannotated POCO properties | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED, github-actions:COMMENTED | 39d |
-| [#6054](https://github.com/microsoft/agent-framework/pull/6054) | microsoft/agent-framework | samples: add McpDocsResearch declarative workflow showcasing agent-level MCP pattern | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 39d |
-| [#2738](https://github.com/openai/openai-cookbook/pull/2738) | openai/openai-cookbook | draft: Agent Regression Tests with Foundry Evaluators (outline, requesting scope feedback) | CONFLICTING | DIRTY | none reported | none | 39d |
-| [#6046](https://github.com/microsoft/agent-framework/pull/6046) | microsoft/agent-framework | .NET: docs(decisions): resolve duplicate ADR sequence numbers (0016, 0021, 0024) | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED, jluocsa:COMMENTED | 40d |
-| [#5908](https://github.com/microsoft/agent-framework/pull/5908) | microsoft/agent-framework | .NET: fix(aspire-devui): ship Microsoft.Agents.AI.DevUI as a transitive dependency | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 45d |
-| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 45d |
-| [#2704](https://github.com/openai/openai-cookbook/pull/2704) | openai/openai-cookbook | Add maxreid-openai to authors.yaml (5 referenced pages) | MERGEABLE | BLOCKED | none reported | none | 45d |
-| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | MERGEABLE | BLOCKED | none reported | none | 45d |
-| [#2443](https://github.com/github/github-mcp-server/pull/2443) | github/github-mcp-server | warn that issue_write body REPLACES content, not appends (fixes #2410) | CONFLICTING | DIRTY | none reported | copilot-pull-request-reviewer:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED, jluocsa:COMMENTED, jluocsa:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED | 55d |
-| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | MERGEABLE | BLOCKED | none reported | none | 55d |
+| [#6](https://github.com/DanGiannone1/personal-assistant-agent-harness/pull/6) | DanGiannone1/personal-assistant-agent-harness | docs: propose Reporting (I13) as a fifth capability | MERGEABLE | BLOCKED | none reported | none | 1d |
+| [#3070](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3070) | Azure-Samples/azure-search-openai-demo | Group CSV rows into pages to avoid OOM in cloud ingestion | MERGEABLE | BLOCKED | 1✅ | none | 33d |
+| [#3069](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3069) | Azure-Samples/azure-search-openai-demo | Heal LLM-simplified citations to canonical reference | MERGEABLE | UNSTABLE | 1✅ | none | 33d |
+| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | MERGEABLE | BLOCKED | 1✅ | pamelafox:CHANGES_REQUESTED | 33d |
+| [#2363](https://github.com/microsoft/graphrag/pull/2363) | microsoft/graphrag | fix(config): preserve literal $ in config values | MERGEABLE | BLOCKED | 1❌, 1✅ | none | 40d |
+| [#14031](https://github.com/microsoft/semantic-kernel/pull/14031) | microsoft/semantic-kernel | .Net: Bump Scriban from 7.1.0 to 7.2.0 to address GHSA-24c8-4792-22hx | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED, github-actions:COMMENTED, westey-m:APPROVED | 40d |
+| [#14030](https://github.com/microsoft/semantic-kernel/pull/14030) | microsoft/semantic-kernel | .Net: Fix RedisJsonCollection upsert persisting unannotated POCO properties | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED, github-actions:COMMENTED | 40d |
+| [#6054](https://github.com/microsoft/agent-framework/pull/6054) | microsoft/agent-framework | samples: add McpDocsResearch declarative workflow showcasing agent-level MCP pattern | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 40d |
+| [#2738](https://github.com/openai/openai-cookbook/pull/2738) | openai/openai-cookbook | draft: Agent Regression Tests with Foundry Evaluators (outline, requesting scope feedback) | CONFLICTING | DIRTY | none reported | none | 40d |
+| [#6046](https://github.com/microsoft/agent-framework/pull/6046) | microsoft/agent-framework | .NET: docs(decisions): resolve duplicate ADR sequence numbers (0016, 0021, 0024) | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED, jluocsa:COMMENTED | 41d |
+| [#5908](https://github.com/microsoft/agent-framework/pull/5908) | microsoft/agent-framework | .NET: fix(aspire-devui): ship Microsoft.Agents.AI.DevUI as a transitive dependency | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 46d |
+| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 46d |
+| [#2704](https://github.com/openai/openai-cookbook/pull/2704) | openai/openai-cookbook | Add maxreid-openai to authors.yaml (5 referenced pages) | MERGEABLE | BLOCKED | none reported | none | 46d |
+| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | MERGEABLE | BLOCKED | none reported | none | 46d |
+| [#2443](https://github.com/github/github-mcp-server/pull/2443) | github/github-mcp-server | warn that issue_write body REPLACES content, not appends (fixes #2410) | CONFLICTING | DIRTY | none reported | copilot-pull-request-reviewer:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED, jluocsa:COMMENTED, jluocsa:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED | 56d |
+| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | MERGEABLE | BLOCKED | none reported | none | 56d |
 <!-- END: PR_TABLE -->
 
 ## Recently merged (last 30 days)
@@ -37,7 +38,6 @@ preserved across runs.
 | [#3543](https://github.com/openai/openai-agents-python/pull/3543) | openai/openai-agents-python | docs: fix two docstring grammar errors in tool.py | 2026-06-04 |
 | [#3542](https://github.com/openai/openai-agents-python/pull/3542) | openai/openai-agents-python | test: add unit tests for run_demo_loop streaming, EOF, and empty-input paths | 2026-06-04 |
 | [#3071](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3071) | Azure-Samples/azure-search-openai-demo | Surface ACL authorization forwarding in Thought Process (#2872) | 2026-06-04 |
-| [#3067](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3067) | Azure-Samples/azure-search-openai-demo | Fix locale key parity: remove stale i18n keys and add guard test | 2026-06-02 |
 <!-- END: MERGED_TABLE -->
 
 ## Queue / Priorities
