@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Refreshes an OSS-STATUS.md file with the latest state of a user's PRs across
   upstream repos. Designed to be reusable across GitHub accounts and runnable
@@ -45,6 +45,13 @@ if (-not $StatusFile) {
   $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } elseif ($MyInvocation.MyCommand.Path) { Split-Path -Parent $MyInvocation.MyCommand.Path } else { (Get-Location).Path }
   $StatusFile = Join-Path $scriptDir 'OSS-STATUS.md'
 }
+
+# The .NET file APIs used below resolve relative paths against the process
+# working directory, which is not always PowerShell's current location.
+if (-not [System.IO.Path]::IsPathRooted($StatusFile)) {
+  $StatusFile = Join-Path (Get-Location).Path $StatusFile
+}
+$StatusFile = [System.IO.Path]::GetFullPath($StatusFile)
 
 function Get-AgeDays { param([datetime]$Date) [int]([datetime]::UtcNow - $Date.ToUniversalTime()).TotalDays }
 
@@ -166,10 +173,10 @@ preserved across runs.
 
 _(add your own bullets here — they survive every refresh)_
 "@
-  Set-Content -Path $StatusFile -Value $template -Encoding UTF8
+  [System.IO.File]::WriteAllText($StatusFile, $template, [System.Text.UTF8Encoding]::new($false))
 }
 
-$content = Get-Content -Raw -Path $StatusFile
+$content = [System.IO.File]::ReadAllText($StatusFile, [System.Text.UTF8Encoding]::new($false))
 
 $openBlock   = (@('<!-- BEGIN: PR_TABLE -->')     + $openTable   + @('<!-- END: PR_TABLE -->'))     -join "`n"
 $mergedBlock = (@('<!-- BEGIN: MERGED_TABLE -->') + $mergedTable + @('<!-- END: MERGED_TABLE -->')) -join "`n"
@@ -182,6 +189,6 @@ $content = [regex]::Replace($content, $pattern2, { param($m) $mergedBlock })
 $today = (Get-Date).ToString('yyyy-MM-dd HH:mm')
 $content = [regex]::Replace($content, '\*\*Last refreshed:\*\*[^\n]*', "**Last refreshed:** $today")
 
-Set-Content -Path $StatusFile -Value $content -Encoding UTF8 -NoNewline
+[System.IO.File]::WriteAllText($StatusFile, $content, [System.Text.UTF8Encoding]::new($false))
 Write-Host "Updated: $StatusFile" -ForegroundColor Green
 Write-Host "  Open: $($openRows.Count) | Merged in last $MergedDays days: $(($mergedRows | Measure-Object).Count)" -ForegroundColor Green
