@@ -4,7 +4,7 @@ Auto-refreshed daily by [refresh-oss-status.ps1](./refresh-oss-status.ps1).
 Hand-curated sections (queue, notes) live outside the marker blocks and are
 preserved across runs.
 
-**Last refreshed:** 2026-08-29 20:02
+**Last refreshed:** 2026-08-30 03:03
 
 ## Open PRs
 
@@ -12,16 +12,16 @@ preserved across runs.
 | # | Repo | Title | Mergeable | MergeState | Checks | Reviews | Age |
 |---|---|---|---|---|---|---|---|
 | [#59](https://github.com/DanGiannone1/csa-workbench/pull/59) | DanGiannone1/csa-workbench | examples: add a runnable Agent Framework evaluation lane | MERGEABLE | BLOCKED | none reported | none | 17d |
-| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | CONFLICTING | DIRTY | 1✅ | pamelafox:CHANGES_REQUESTED | 91d |
 | [#3069](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3069) | Azure-Samples/azure-search-openai-demo | Heal LLM-simplified citations to canonical reference | MERGEABLE | CLEAN | 1✅ | none | 91d |
-| [#6054](https://github.com/microsoft/agent-framework/pull/6054) | microsoft/agent-framework | samples: add McpDocsResearch declarative workflow showcasing agent-level MCP pattern | MERGEABLE | BLOCKED | 1✅, 1 skipped | copilot-pull-request-reviewer:COMMENTED | 98d |
-| [#6046](https://github.com/microsoft/agent-framework/pull/6046) | microsoft/agent-framework | .NET: docs(decisions): resolve duplicate ADR sequence numbers (0016, 0021, 0024) | MERGEABLE | BLOCKED | 1✅, 1 skipped | copilot-pull-request-reviewer:COMMENTED, jluocsa:COMMENTED | 99d |
-| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | MERGEABLE | BLOCKED | 1✅, 1 skipped | copilot-pull-request-reviewer:COMMENTED | 104d |
-| [#5908](https://github.com/microsoft/agent-framework/pull/5908) | microsoft/agent-framework | .NET: fix(aspire-devui): ship Microsoft.Agents.AI.DevUI as a transitive dependency | MERGEABLE | BLOCKED | 1✅, 1 skipped | copilot-pull-request-reviewer:COMMENTED | 104d |
-| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | MERGEABLE | BLOCKED | none reported | none | 105d |
+| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | CONFLICTING | DIRTY | 1✅ | pamelafox:CHANGES_REQUESTED | 91d |
+| [#6054](https://github.com/microsoft/agent-framework/pull/6054) | microsoft/agent-framework | samples: add McpDocsResearch declarative workflow showcasing agent-level MCP pattern | MERGEABLE | BLOCKED | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 98d |
+| [#6046](https://github.com/microsoft/agent-framework/pull/6046) | microsoft/agent-framework | .NET: docs(decisions): resolve duplicate ADR sequence numbers (0016, 0021, 0024) | MERGEABLE | BLOCKED | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED, jluocsa:COMMENTED | 99d |
+| [#5908](https://github.com/microsoft/agent-framework/pull/5908) | microsoft/agent-framework | .NET: fix(aspire-devui): ship Microsoft.Agents.AI.DevUI as a transitive dependency | MERGEABLE | BLOCKED | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 104d |
+| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | MERGEABLE | BLOCKED | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 104d |
 | [#2704](https://github.com/openai/openai-cookbook/pull/2704) | openai/openai-cookbook | Add maxreid-openai to authors.yaml (5 referenced pages) | MERGEABLE | BLOCKED | none reported | none | 105d |
-| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | CONFLICTING | DIRTY | none reported | none | 114d |
+| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | MERGEABLE | BLOCKED | none reported | none | 105d |
 | [#2443](https://github.com/github/github-mcp-server/pull/2443) | github/github-mcp-server | warn that issue_write body REPLACES content, not appends (fixes #2410) | CONFLICTING | DIRTY | none reported | copilot-pull-request-reviewer:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED, jluocsa:COMMENTED, jluocsa:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED | 114d |
+| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | CONFLICTING | DIRTY | none reported | none | 114d |
 <!-- END: PR_TABLE -->
 
 ## Recently merged (last 30 days)
