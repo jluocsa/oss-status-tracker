@@ -4,22 +4,22 @@ Auto-refreshed daily by [refresh-oss-status.ps1](./refresh-oss-status.ps1).
 Hand-curated sections (queue, notes) live outside the marker blocks and are
 preserved across runs.
 
-**Last refreshed:** 2026-09-16 17:39
+**Last refreshed:** 2026-09-17 17:40
 
 ## Open PRs
 
 <!-- BEGIN: PR_TABLE -->
 | # | Repo | Title | Mergeable | MergeState | Checks | Reviews | Age |
 |---|---|---|---|---|---|---|---|
-| [#59](https://github.com/DanGiannone1/csa-workbench/pull/59) | DanGiannone1/csa-workbench | examples: add a runnable Agent Framework evaluation lane | MERGEABLE | BLOCKED | none reported | none | 35d |
-| [#3069](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3069) | Azure-Samples/azure-search-openai-demo | Heal LLM-simplified citations to canonical reference | MERGEABLE | CLEAN | 1✅ | none | 109d |
-| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | CONFLICTING | DIRTY | 1✅ | pamelafox:CHANGES_REQUESTED | 109d |
-| [#6054](https://github.com/microsoft/agent-framework/pull/6054) | microsoft/agent-framework | samples: add McpDocsResearch declarative workflow showcasing agent-level MCP pattern | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 116d |
-| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 122d |
-| [#2704](https://github.com/openai/openai-cookbook/pull/2704) | openai/openai-cookbook | Add maxreid-openai to authors.yaml (5 referenced pages) | CONFLICTING | DIRTY | none reported | none | 122d |
-| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | CONFLICTING | DIRTY | none reported | none | 122d |
-| [#2443](https://github.com/github/github-mcp-server/pull/2443) | github/github-mcp-server | warn that issue_write body REPLACES content, not appends (fixes #2410) | UNKNOWN | UNKNOWN | none reported | copilot-pull-request-reviewer:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED, jluocsa:COMMENTED, jluocsa:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED | 132d |
-| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | CONFLICTING | DIRTY | none reported | none | 132d |
+| [#59](https://github.com/DanGiannone1/csa-workbench/pull/59) | DanGiannone1/csa-workbench | examples: add a runnable Agent Framework evaluation lane | MERGEABLE | BLOCKED | none reported | none | 36d |
+| [#3069](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3069) | Azure-Samples/azure-search-openai-demo | Heal LLM-simplified citations to canonical reference | MERGEABLE | CLEAN | 1✅ | none | 110d |
+| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | CONFLICTING | DIRTY | 1✅ | pamelafox:CHANGES_REQUESTED | 110d |
+| [#6054](https://github.com/microsoft/agent-framework/pull/6054) | microsoft/agent-framework | samples: add McpDocsResearch declarative workflow showcasing agent-level MCP pattern | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 117d |
+| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 123d |
+| [#2704](https://github.com/openai/openai-cookbook/pull/2704) | openai/openai-cookbook | Add maxreid-openai to authors.yaml (5 referenced pages) | UNKNOWN | UNKNOWN | none reported | none | 123d |
+| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | UNKNOWN | UNKNOWN | none reported | none | 123d |
+| [#2443](https://github.com/github/github-mcp-server/pull/2443) | github/github-mcp-server | warn that issue_write body REPLACES content, not appends (fixes #2410) | CONFLICTING | DIRTY | none reported | copilot-pull-request-reviewer:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED, jluocsa:COMMENTED, jluocsa:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED | 133d |
+| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | UNKNOWN | UNKNOWN | none reported | none | 133d |
 <!-- END: PR_TABLE -->
 
 ## Recently merged (last 30 days)
