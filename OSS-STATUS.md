@@ -4,21 +4,21 @@ Auto-refreshed daily by [refresh-oss-status.ps1](./refresh-oss-status.ps1).
 Hand-curated sections (queue, notes) live outside the marker blocks and are
 preserved across runs.
 
-**Last refreshed:** 2026-09-27 17:50
+**Last refreshed:** 2026-09-28 20:09
 
 ## Open PRs
 
 <!-- BEGIN: PR_TABLE -->
 | # | Repo | Title | Mergeable | MergeState | Checks | Reviews | Age |
 |---|---|---|---|---|---|---|---|
-| [#59](https://github.com/DanGiannone1/csa-workbench/pull/59) | DanGiannone1/csa-workbench | examples: add a runnable Agent Framework evaluation lane | MERGEABLE | BLOCKED | none reported | none | 46d |
-| [#3069](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3069) | Azure-Samples/azure-search-openai-demo | Heal LLM-simplified citations to canonical reference | MERGEABLE | CLEAN | 1✅ | none | 120d |
-| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | CONFLICTING | DIRTY | 1✅ | pamelafox:CHANGES_REQUESTED | 120d |
-| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | MERGEABLE | BLOCKED | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 133d |
-| [#2704](https://github.com/openai/openai-cookbook/pull/2704) | openai/openai-cookbook | Add maxreid-openai to authors.yaml (5 referenced pages) | CONFLICTING | DIRTY | none reported | none | 133d |
-| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | CONFLICTING | DIRTY | none reported | none | 133d |
-| [#2443](https://github.com/github/github-mcp-server/pull/2443) | github/github-mcp-server | warn that issue_write body REPLACES content, not appends (fixes #2410) | CONFLICTING | DIRTY | none reported | copilot-pull-request-reviewer:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED, jluocsa:COMMENTED, jluocsa:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED | 143d |
-| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | CONFLICTING | DIRTY | none reported | none | 143d |
+| [#59](https://github.com/DanGiannone1/csa-workbench/pull/59) | DanGiannone1/csa-workbench | examples: add a runnable Agent Framework evaluation lane | MERGEABLE | BLOCKED | none reported | none | 47d |
+| [#3069](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3069) | Azure-Samples/azure-search-openai-demo | Heal LLM-simplified citations to canonical reference | MERGEABLE | CLEAN | 1✅ | none | 121d |
+| [#3068](https://github.com/Azure-Samples/azure-search-openai-demo/pull/3068) | Azure-Samples/azure-search-openai-demo | Add current date to query rewrite and chat answer prompts | CONFLICTING | DIRTY | 1✅ | pamelafox:CHANGES_REQUESTED | 121d |
+| [#5907](https://github.com/microsoft/agent-framework/pull/5907) | microsoft/agent-framework | .NET: docs(aspire-devui): align README usage example with WithAgentService semantics | UNKNOWN | UNKNOWN | 1 skipped, 1✅ | copilot-pull-request-reviewer:COMMENTED | 134d |
+| [#2704](https://github.com/openai/openai-cookbook/pull/2704) | openai/openai-cookbook | Add maxreid-openai to authors.yaml (5 referenced pages) | CONFLICTING | DIRTY | none reported | none | 135d |
+| [#2702](https://github.com/openai/openai-cookbook/pull/2702) | openai/openai-cookbook | Add alfozan to authors.yaml (referenced by #2658) | CONFLICTING | DIRTY | none reported | none | 135d |
+| [#2443](https://github.com/github/github-mcp-server/pull/2443) | github/github-mcp-server | warn that issue_write body REPLACES content, not appends (fixes #2410) | CONFLICTING | DIRTY | none reported | copilot-pull-request-reviewer:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED, jluocsa:COMMENTED, jluocsa:COMMENTED, pachecocordovamoiseseduardo-byte:APPROVED | 144d |
+| [#2669](https://github.com/openai/openai-cookbook/pull/2669) | openai/openai-cookbook | docs: fix typos across example notebooks | CONFLICTING | DIRTY | none reported | none | 144d |
 <!-- END: PR_TABLE -->
 
 ## Recently merged (last 30 days)
